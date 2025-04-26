@@ -2,6 +2,8 @@
 
 #local secrets 
 src/secrets.ts
+secrets.py
+/__pycache__
 
 # dependencies
 /node_modules
