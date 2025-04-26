@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import { api_user, api_secret } from './secrets'
 
 function App() {
   const [inputValue, setInputValue] = useState<string>('');
@@ -16,7 +17,7 @@ function App() {
   const handleLoadImage = async () => {
     setImageSource(inputValue);
     const response = await fetch(
-      `${apiUrl}?models=genai&api_user=14331906&api_secret=Kb9wb6aLjR4wzne3vD8bwbVXhMAEsgXN&url=${encodeURIComponent(
+      `${apiUrl}?models=genai&api_user=${api_user}&api_secret=${api_secret}&url=${encodeURIComponent(
         inputValue as string // Type assertion as we've checked it's not null or empty
       )}`
     );
